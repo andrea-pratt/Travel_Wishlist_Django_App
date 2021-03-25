@@ -19,3 +19,9 @@ label {
 a.nav-link{
     margin-right: 10px;
 }
+
+#add-new-place {
+    background-color: rgb(14, 6, 51);
+    border: rgb(5, 26, 37);
+    width: 193px;
+}

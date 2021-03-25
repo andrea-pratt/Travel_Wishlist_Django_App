@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# database model used to save data from the forms
 class Place(models.Model):
     name = models.CharField(max_length=200)
     visited = models.BooleanField(default=False)
