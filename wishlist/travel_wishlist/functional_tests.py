@@ -112,7 +112,7 @@ class AddEditPlacesTests(LiveServerTestCase):
 
 class PageContentTests(LiveServerTestCase):
 
-    fixtures = ['test_users', 'test_places']
+    fixtures = ['test_users', 'test_places'] # load test data into database 
 
     def setUp(self):
         self.browser = webdriver.Chrome() 
@@ -125,13 +125,14 @@ class PageContentTests(LiveServerTestCase):
     
 
     def tearDown(self):
-        self.browser.quit()
+        self.browser.quit()  # close the browser after each test
 
     def test_get_home_page_list_of_places(self):
 
         self.browser.get(self.live_server_url)
 
-        self.assertIn('San Francisco', self.browser.page_source)
+        # test that correct wishlist places are displayed in the browser 
+        self.assertIn('San Francisco', self.browser.page_source)  
         self.assertIn('New York', self.browser.page_source)
 
         self.assertNotIn('Tokyo', self.browser.page_source)
@@ -139,7 +140,7 @@ class PageContentTests(LiveServerTestCase):
     
 
     def test_get_list_of_visited_places(self):
-
+        # test that the correct visited places are displayed in the browser
         self.browser.get(self.live_server_url + '/visited')
     
         self.assertIn('Tokyo', self.browser.page_source)

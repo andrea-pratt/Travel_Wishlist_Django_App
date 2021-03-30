@@ -12,7 +12,7 @@ class Place(models.Model):
     date_visited = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='user_images/', blank=True, null=True)
 
-
+    # override the default model save function
     def save(self, *args, **kwargs):
         old_place = Place.objects.filter(pk=self.pk).first()
         if old_place and old_place.photo:
