@@ -42,7 +42,7 @@
   }
   
   #add-new-place {
-    background-color: green;
+    background-color: rgb(10, 95, 38);
     border: darkgreen;
   }
   
@@ -54,7 +54,7 @@
   }
   
   span.visited-list-place-name {
-    word-wrap:break-word;
+    word-wrap: break-word;
   }
 
   a.visited-place_display{
