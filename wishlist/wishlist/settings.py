@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'places',
         'USER': 'traveler',
-        'PASSWORD': 'alt57idhfj239',
+        'PASSWORD': os.environ.get('TRAVELER_PW'),
         'HOST': '/cloudsql/leafy-sunrise-310520:us-central1:wishlist-db',
         'PORT': '5432'
     }
